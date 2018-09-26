@@ -1,0 +1,42 @@
+{
+    "name": "superbig/craft-tail",
+    "description": "An console command to tail your Craft log",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "tail"
+    ],
+    "support": {
+        "docs": "https://github.com/superbigco/craft-tail/blob/master/README.md",
+        "issues": "https://github.com/superbigco/craft-tail/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Superbig",
+            "homepage": "https://superbig.co"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1",
+        "symfony/process": "^3.3|^4.0"
+
+    },
+    "autoload": {
+        "psr-4": {
+          "superbig\\tail\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Tail",
+        "handle": "tail",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/superbigco/craft-tail/master/CHANGELOG.md",
+        "class": "superbig\\tail\\Tail"
+    }
+}
