@@ -24,6 +24,6 @@ To install the plugin, follow these instructions.
 
 ## Using Tail
 
-`./craft tail`
+Run this command in your terminal: `./craft tail`
 
 Brought to you by [Superbig](https://superbig.co)
