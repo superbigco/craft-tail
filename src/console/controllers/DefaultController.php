@@ -19,6 +19,7 @@ use Symfony\Component\Finder\SplFileInfo;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Finder\Finder;
 use yii\console\Controller;
+use yii\console\ExitCode;
 use yii\helpers\Console;
 
 
@@ -45,7 +46,7 @@ class DefaultController extends Controller
     public $lines = null;
 
     /**
-     * @var string Clear terminal output
+     * @var string Clear the terminal screen
      */
     public $clear = false;
 
@@ -100,13 +101,8 @@ class DefaultController extends Controller
                 $this->output->write($line);
             });
 
-        return $result;
+        return ExitCode::OK;
     }
-
-    protected $signature = 'tail
-                            {--lines=0 : Output the last number of lines}
-                            {--H|hide-stack-traces : Filter out the stack traces}
-                            {--clear : Clear the terminal screen}';
 
 
     protected function findLatestLogFile(string $directory, $type = 'web')
