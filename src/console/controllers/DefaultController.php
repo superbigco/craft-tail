@@ -82,7 +82,7 @@ class DefaultController extends Controller
         $logDirectory = Craft::$app->getPath()->getLogPath();
 
         if (!$path = $this->findLatestLogFile($logDirectory, $this->type)) {
-            $this->warn("Could not find a log file in `{$logDirectory}`.");
+            $this->stderr("Could not find a log file in `{$logDirectory}`.\n", Console::FG_RED);
 
             return;
         }
